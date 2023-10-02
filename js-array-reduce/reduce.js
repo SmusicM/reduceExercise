@@ -31,7 +31,7 @@ Examples:
 */
 
 function vowelCount(str) {
-    const vowels = "aeiou";
+    const vowels = "aeiou"; //const vowels = "aeiouAEIOU";
     return str.split(' ').reduce(function(acc , obj){
        let casecaps = obj.toLowerCase();
        if(vowels.indexOf(casecaps) !== -1){ //obvi if it does not = -1 or invalid at the index
@@ -105,7 +105,7 @@ function partition(arr, callback) {
         if(callback(obj)){
             acc[0].push(0);
         }else{
-            acc[1].push(next);
+            acc[1].push(obj);
         }
         return acc;
     },[[],[]]);
